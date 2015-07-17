@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A51249821B55FBAE00276765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249811B55FBAE00276765 /* AppDelegate.swift */; };
+		A51249841B55FBAE00276765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249831B55FBAE00276765 /* ViewController.swift */; };
+		A51249871B55FBAE00276765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A51249851B55FBAE00276765 /* Main.storyboard */; };
+		A51249891B55FBAE00276765 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A51249881B55FBAE00276765 /* Images.xcassets */; };
+		A512498C1B55FBAF00276765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A512498A1B55FBAF00276765 /* LaunchScreen.xib */; };
+		A51249981B55FBAF00276765 /* RYGraphViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249971B55FBAF00276765 /* RYGraphViewTests.swift */; };
+		A51249A21B55FC2900276765 /* RYCircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249A11B55FC2900276765 /* RYCircleGraphView.swift */; };
+		A51249A31B55FC2900276765 /* RYCircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249A11B55FC2900276765 /* RYCircleGraphView.swift */; };
+		A5A6424A1B563FFB0088A972 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A642491B563FFB0088A972 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A51249921B55FBAF00276765 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A51249741B55FBAE00276765 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A512497B1B55FBAE00276765;
+			remoteInfo = RYGraphView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A512497C1B55FBAE00276765 /* RYGraphView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RYGraphView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51249801B55FBAE00276765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51249811B55FBAE00276765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A51249831B55FBAE00276765 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A51249861B55FBAE00276765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A51249881B55FBAE00276765 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A512498B1B55FBAF00276765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A51249911B55FBAF00276765 /* RYGraphViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RYGraphViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51249961B55FBAF00276765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A51249971B55FBAF00276765 /* RYGraphViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYGraphViewTests.swift; sourceTree = "<group>"; };
+		A51249A11B55FC2900276765 /* RYCircleGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYCircleGraphView.swift; sourceTree = "<group>"; };
+		A5A642491B563FFB0088A972 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A51249791B55FBAE00276765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A6424A1B563FFB0088A972 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A512498E1B55FBAF00276765 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A51249731B55FBAE00276765 = {
+			isa = PBXGroup;
+			children = (
+				A5A642491B563FFB0088A972 /* QuartzCore.framework */,
+				A512497E1B55FBAE00276765 /* RYGraphView */,
+				A51249941B55FBAF00276765 /* RYGraphViewTests */,
+				A512497D1B55FBAE00276765 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A512497D1B55FBAE00276765 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A512497C1B55FBAE00276765 /* RYGraphView.app */,
+				A51249911B55FBAF00276765 /* RYGraphViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A512497E1B55FBAE00276765 /* RYGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				A51249811B55FBAE00276765 /* AppDelegate.swift */,
+				A51249831B55FBAE00276765 /* ViewController.swift */,
+				A51249851B55FBAE00276765 /* Main.storyboard */,
+				A51249A11B55FC2900276765 /* RYCircleGraphView.swift */,
+				A51249881B55FBAE00276765 /* Images.xcassets */,
+				A512498A1B55FBAF00276765 /* LaunchScreen.xib */,
+				A512497F1B55FBAE00276765 /* Supporting Files */,
+			);
+			path = RYGraphView;
+			sourceTree = "<group>";
+		};
+		A512497F1B55FBAE00276765 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A51249801B55FBAE00276765 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A51249941B55FBAF00276765 /* RYGraphViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				A51249971B55FBAF00276765 /* RYGraphViewTests.swift */,
+				A51249951B55FBAF00276765 /* Supporting Files */,
+			);
+			path = RYGraphViewTests;
+			sourceTree = "<group>";
+		};
+		A51249951B55FBAF00276765 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A51249961B55FBAF00276765 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A512497B1B55FBAE00276765 /* RYGraphView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A512499B1B55FBAF00276765 /* Build configuration list for PBXNativeTarget "RYGraphView" */;
+			buildPhases = (
+				A51249781B55FBAE00276765 /* Sources */,
+				A51249791B55FBAE00276765 /* Frameworks */,
+				A512497A1B55FBAE00276765 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RYGraphView;
+			productName = RYGraphView;
+			productReference = A512497C1B55FBAE00276765 /* RYGraphView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A51249901B55FBAF00276765 /* RYGraphViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A512499E1B55FBAF00276765 /* Build configuration list for PBXNativeTarget "RYGraphViewTests" */;
+			buildPhases = (
+				A512498D1B55FBAF00276765 /* Sources */,
+				A512498E1B55FBAF00276765 /* Frameworks */,
+				A512498F1B55FBAF00276765 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A51249931B55FBAF00276765 /* PBXTargetDependency */,
+			);
+			name = RYGraphViewTests;
+			productName = RYGraphViewTests;
+			productReference = A51249911B55FBAF00276765 /* RYGraphViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A51249741B55FBAE00276765 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Reo Yoshida";
+				TargetAttributes = {
+					A512497B1B55FBAE00276765 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					A51249901B55FBAF00276765 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = A512497B1B55FBAE00276765;
+					};
+				};
+			};
+			buildConfigurationList = A51249771B55FBAE00276765 /* Build configuration list for PBXProject "RYGraphView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A51249731B55FBAE00276765;
+			productRefGroup = A512497D1B55FBAE00276765 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A512497B1B55FBAE00276765 /* RYGraphView */,
+				A51249901B55FBAF00276765 /* RYGraphViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A512497A1B55FBAE00276765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51249871B55FBAE00276765 /* Main.storyboard in Resources */,
+				A512498C1B55FBAF00276765 /* LaunchScreen.xib in Resources */,
+				A51249891B55FBAE00276765 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A512498F1B55FBAF00276765 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A51249781B55FBAE00276765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51249A21B55FC2900276765 /* RYCircleGraphView.swift in Sources */,
+				A51249841B55FBAE00276765 /* ViewController.swift in Sources */,
+				A51249821B55FBAE00276765 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A512498D1B55FBAF00276765 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A51249A31B55FC2900276765 /* RYCircleGraphView.swift in Sources */,
+				A51249981B55FBAF00276765 /* RYGraphViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A51249931B55FBAF00276765 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A512497B1B55FBAE00276765 /* RYGraphView */;
+			targetProxy = A51249921B55FBAF00276765 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A51249851B55FBAE00276765 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A51249861B55FBAE00276765 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A512498A1B55FBAF00276765 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A512498B1B55FBAF00276765 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A51249991B55FBAF00276765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A512499A1B55FBAF00276765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A512499C1B55FBAF00276765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RYGraphView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A512499D1B55FBAF00276765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RYGraphView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A512499F1B55FBAF00276765 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RYGraphViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RYGraphView.app/RYGraphView";
+			};
+			name = Debug;
+		};
+		A51249A01B55FBAF00276765 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RYGraphViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RYGraphView.app/RYGraphView";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A51249771B55FBAE00276765 /* Build configuration list for PBXProject "RYGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51249991B55FBAF00276765 /* Debug */,
+				A512499A1B55FBAF00276765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A512499B1B55FBAF00276765 /* Build configuration list for PBXNativeTarget "RYGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A512499C1B55FBAF00276765 /* Debug */,
+				A512499D1B55FBAF00276765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A512499E1B55FBAF00276765 /* Build configuration list for PBXNativeTarget "RYGraphViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A512499F1B55FBAF00276765 /* Debug */,
+				A51249A01B55FBAF00276765 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A51249741B55FBAE00276765 /* Project object */;
+}

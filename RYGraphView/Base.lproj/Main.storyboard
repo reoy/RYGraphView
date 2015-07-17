@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="RYGraphView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Zo-eo-Vg9" customClass="RYCircleGraphView" customModule="RYGraphView" customModuleProvider="target">
+                                <rect key="frame" x="250" y="30" width="100" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="twC-6x-ws2"/>
+                                    <constraint firstAttribute="width" constant="100" id="wxI-py-mxR"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adm-Fq-d5m">
+                                <rect key="frame" x="250" y="160" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kJW-ow-Zli"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-lC-H92">
+                                <rect key="frame" x="274" y="220" width="53" height="30"/>
+                                <state key="normal" title="Redraw">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSelected" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZKK-gB-8oN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039999998" green="0.83137254900000002" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Zhz-lC-H92" secondAttribute="centerX" id="2kP-Vf-9xC"/>
+                            <constraint firstItem="0Zo-eo-Vg9" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="10" id="D4u-KN-adR"/>
+                            <constraint firstAttribute="centerY" secondItem="0Zo-eo-Vg9" secondAttribute="centerY" id="Ij9-Yq-njG"/>
+                            <constraint firstItem="Zhz-lC-H92" firstAttribute="top" secondItem="Adm-Fq-d5m" secondAttribute="bottom" constant="30" id="hvL-sk-ZSS"/>
+                            <constraint firstItem="Adm-Fq-d5m" firstAttribute="top" secondItem="0Zo-eo-Vg9" secondAttribute="bottom" constant="30" id="lGT-ec-sBR"/>
+                            <constraint firstAttribute="centerX" secondItem="0Zo-eo-Vg9" secondAttribute="centerX" id="rjW-03-iUK"/>
+                            <constraint firstAttribute="centerX" secondItem="Adm-Fq-d5m" secondAttribute="centerX" id="zRQ-88-aBE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ij9-Yq-njG"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="circleGraph" destination="0Zo-eo-Vg9" id="fnT-7X-1n4"/>
+                        <outlet property="textField" destination="Adm-Fq-d5m" id="QH9-gX-VUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
