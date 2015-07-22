@@ -43,7 +43,20 @@ class RYCircleGraphView: UIView {
     private var strokeColor = UIColor(red:1, green:0.67, blue:0.22, alpha:1)
     private var accomplishColor = UIColor(red:0.49, green:0.8, blue:0.32, alpha:1)
     
-    var customView:UIView?
+    private var _customView:UIView?
+    var customView:UIView? {
+        get {
+            if let customView = self._customView {
+                return customView
+            } else {
+                return nil
+            }
+        }
+        set {
+            self.percentageLabel?.hidden = true
+            self._customView = newValue
+        }
+    }
     private var percentageLabel:UILabel?
     private var accomplishView:UIView?
     
@@ -81,8 +94,11 @@ class RYCircleGraphView: UIView {
     func  drawWithAnimation(#percent: CGFloat) {
         self.percent = percent
         
-        createLabel()
-        createAccomplishView()
+        if let customView = customView {
+            configureCustomView()
+        } else {
+            createLabel()
+        }
         
         strokeLayer?.removeFromSuperlayer()
         accomplishLayer?.removeFromSuperlayer()
@@ -118,16 +134,6 @@ class RYCircleGraphView: UIView {
         strokeColorAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         strokeLayer?.addAnimation(strokeColorAnim, forKey: accomplishAnimationKey)
         
-//        let showAccomplishViewAnim = CABasicAnimation(keyPath: "opacity")
-//        showAccomplishViewAnim.removedOnCompletion = false
-//        showAccomplishViewAnim.duration = animationDuration
-//        showAccomplishViewAnim.fillMode = kCAFillModeForwards
-//        showAccomplishViewAnim.fromValue = 0.0
-//        showAccomplishViewAnim.toValue = 1.0
-//        showAccomplishViewAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        accomplishView?.layer.addAnimation(showAccomplishViewAnim, forKey: nil)
-//        CATransaction.commit()
-        
         let showAccomplishViewAnim = CABasicAnimation(keyPath: "strokeEnd")
         showAccomplishViewAnim.removedOnCompletion = false
         showAccomplishViewAnim.duration = animationDuration
@@ -149,13 +155,14 @@ class RYCircleGraphView: UIView {
         CATransaction.commit()
     }
     
-    private func createAccomplishView() {
-        accomplishView?.removeFromSuperview()
-        accomplishView = UIImageView(image: UIImage(named: "ico_mypage_v2_complete"))
-        accomplishView?.layer.opacity = 0
-        accomplishView?.frame = CGRectMake(0, 0, 35, 24)
-        accomplishView!.center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
-        self.addSubview(accomplishView!)
+    private func configureCustomView() {
+        customView!.removeFromSuperview()
+        var x = CGFloat(getCenter().x) - ((getRadius() - 6.5) * CGFloat(cos(M_PI / 4.0)))
+        var y = CGFloat(getCenter().y) - ((getRadius() - 6.5) * CGFloat(sin(M_PI / 4.0)))
+        var sideLength = ((getRadius() - 6.5) * CGFloat(cos(M_PI / 4.0))) * 2
+        customView!.frame = CGRectMake(x, y, sideLength, sideLength)
+        println(NSStringFromCGRect(customView!.frame))
+        self.addSubview(customView!)
     }
     
     private func createAccomplishLayer()->CAShapeLayer {
@@ -196,14 +203,7 @@ class RYCircleGraphView: UIView {
     :returns: CAShapeLayer
     */
     private func createCircleLayer(percent:CGFloat, strokeColor: UIColor)-> CAShapeLayer {
-        let can = CGFloat(M_PI) / 2 // Circle adjustment number
-        let path = UIBezierPath(arcCenter: getCenter(), radius: getRadius() - (margin + lineWidth) , startAngle: -1 * can, endAngle: percent * 2.0 * CGFloat(M_PI) - can, clockwise: true)
-        let layer = CAShapeLayer()
-        layer.path = path.CGPath
-        layer.lineWidth = lineWidth
-        layer.lineCap = kCALineCapRound
-        layer.fillColor = UIColor.clearColor().CGColor
-        layer.strokeColor = strokeColor.CGColor
+        let layer:RYCircleLayer = RYCircleLayer(center: getCenter(), radius: getRadius(), lineWidth: lineWidth, percentage: percent, strokeColor: strokeColor)
         return layer
     }
     

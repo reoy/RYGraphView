@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 //        circleGraph.draw(percent: 0.3)
         circleGraph.backgroundRounded = true
         let percent:CGFloat = CGFloat(NSString(string: textField.text).floatValue) / 100.0
+//        circleGraph.customView = UIImageView(image: UIImage(named: "listening"))
         circleGraph.drawWithAnimation(percent: percent)
     }
 

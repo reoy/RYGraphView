@@ -14,8 +14,8 @@
 		A512498C1B55FBAF00276765 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A512498A1B55FBAF00276765 /* LaunchScreen.xib */; };
 		A51249981B55FBAF00276765 /* RYGraphViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249971B55FBAF00276765 /* RYGraphViewTests.swift */; };
 		A51249A21B55FC2900276765 /* RYCircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249A11B55FC2900276765 /* RYCircleGraphView.swift */; };
-		A51249A31B55FC2900276765 /* RYCircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51249A11B55FC2900276765 /* RYCircleGraphView.swift */; };
 		A5A6424A1B563FFB0088A972 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A642491B563FFB0088A972 /* QuartzCore.framework */; };
+		A5A642501B58A28B0088A972 /* RYCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6424F1B58A28B0088A972 /* RYCircleLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +41,7 @@
 		A51249971B55FBAF00276765 /* RYGraphViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RYGraphViewTests.swift; sourceTree = "<group>"; };
 		A51249A11B55FC2900276765 /* RYCircleGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYCircleGraphView.swift; sourceTree = "<group>"; };
 		A5A642491B563FFB0088A972 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A5A6424F1B58A28B0088A972 /* RYCircleLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYCircleLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 				A51249831B55FBAE00276765 /* ViewController.swift */,
 				A51249851B55FBAE00276765 /* Main.storyboard */,
 				A51249A11B55FC2900276765 /* RYCircleGraphView.swift */,
+				A5A6424F1B58A28B0088A972 /* RYCircleLayer.swift */,
 				A51249881B55FBAE00276765 /* Images.xcassets */,
 				A512498A1B55FBAF00276765 /* LaunchScreen.xib */,
 				A512497F1B55FBAE00276765 /* Supporting Files */,
@@ -220,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A642501B58A28B0088A972 /* RYCircleLayer.swift in Sources */,
 				A51249A21B55FC2900276765 /* RYCircleGraphView.swift in Sources */,
 				A51249841B55FBAE00276765 /* ViewController.swift in Sources */,
 				A51249821B55FBAE00276765 /* AppDelegate.swift in Sources */,
@@ -230,7 +233,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A51249A31B55FC2900276765 /* RYCircleGraphView.swift in Sources */,
 				A51249981B55FBAF00276765 /* RYGraphViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
