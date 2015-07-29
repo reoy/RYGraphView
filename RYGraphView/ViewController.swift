@@ -10,8 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var circleGraph: RYCircleGraphView!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var circleGraph: RYCircleGraphView! {
+        didSet {
+            circleGraph.backgroundRounded = true
+        }
+    }
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var slider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +24,7 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-//        circleGraph.draw(percent: 0.3)
-        circleGraph.backgroundRounded = true
-        let percent:CGFloat = CGFloat(NSString(string: textField.text).floatValue) / 100.0
-//        circleGraph.customView = UIImageView(image: UIImage(named: "listening"))
-        circleGraph.drawWithAnimation(percent: percent)
+        draw()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,9 +33,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonSelected () {
-        let percent:CGFloat = CGFloat(NSString(string: textField.text).floatValue) / 100.0
-        circleGraph.redraw(percent: percent, animated: true)
+        draw()
     }
-
+    
+    @IBAction func sliderAction() {
+        label.text = "\(Int(round(slider.value * 100)))%"
+    }
+    
+    func draw() {
+        let percent:CGFloat = CGFloat(slider.value)
+        circleGraph.drawWithAnimation(percent: percent)
+    }
 }
 
