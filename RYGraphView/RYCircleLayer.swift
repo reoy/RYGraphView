@@ -15,6 +15,10 @@ class RYCircleLayer: CAShapeLayer {
         super.init()
     }
     
+    override init(layer: AnyObject!) {
+        super.init(layer: layer)
+    }
+    
     convenience init(center: CGPoint, radius: CGFloat, lineWidth: CGFloat, percentage: CGFloat, strokeColor:UIColor) {
         self.init()
         let can            = CGFloat(M_PI) / 2// Circle adjustment number
@@ -26,7 +30,7 @@ class RYCircleLayer: CAShapeLayer {
         self.fillColor     = UIColor.clearColor().CGColor
         self.strokeColor   = strokeColor.CGColor
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -70,6 +70,7 @@ class RYCircleGraphView: UIView {
         super.awakeFromNib()
         
         createBackground()
+        createLabel()
     }
     
     func draw(#percent: CGFloat) {
@@ -92,16 +93,14 @@ class RYCircleGraphView: UIView {
     }
     
     func  drawWithAnimation(#percent: CGFloat) {
+        refreshAllObject()
+        
         self.percent = percent
         
         if let customView = customView {
             configureCustomView()
-        } else {
-            createLabel()
         }
         
-        strokeLayer?.removeFromSuperlayer()
-        accomplishLayer?.removeFromSuperlayer()
         strokeLayer = createCircleLayer(percent, strokeColor:strokeColor)
         self.layer.addSublayer(strokeLayer!)
     
@@ -116,6 +115,14 @@ class RYCircleGraphView: UIView {
         drawAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         strokeLayer?.addAnimation(drawAnim, forKey: strokeAnimationKey)
         CATransaction.commit()
+    }
+    
+    private func refreshAllObject() {
+        percentageLabel?.removeFromSuperview()
+        strokeLayer?.removeFromSuperlayer()
+        accomplishLayer?.removeFromSuperlayer()
+        
+        createLabel()
     }
     
     private func accomplishAnimation() {
@@ -184,6 +191,7 @@ class RYCircleGraphView: UIView {
         percentageLabel = UILabel(frame: self.bounds)
         percentageLabel?.textAlignment = NSTextAlignment.Center
         percentageLabel?.textColor = strokeColor
+        percentageLabel?.text = "\(Int(percent*100))%"
         percentageLabel?.font = UIFont(name: "HelveticaNeue", size: getRadius()/2)
         self.addSubview(percentageLabel!)
     }
